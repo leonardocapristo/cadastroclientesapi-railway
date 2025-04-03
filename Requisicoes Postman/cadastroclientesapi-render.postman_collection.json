@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "129e6a64-b10a-4ac6-8908-c5139ecf3a52",
+		"name": "cadastroclientesapi-render",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22811480"
+	},
+	"item": [
+		{
+			"name": "buscarTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarTodosPaginaFiltros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes/filtros?page=0&size=5&sort=nome,asc",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes",
+						"filtros"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "nome,asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes/4",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarNovo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Caio\",\r\n    \"email\": \"caio@gmail\",\r\n    \"telefone\": 23433434234,\r\n    \"dataNascimento\": \"25/03/1997\",\r\n    \"cpf\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"bruno2\",\r\n    \"email\": \"joao.silva@email.com\",\r\n    \"telefone\": 11987654321,\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes/4",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://cadastroclientesapi-render.onrender.com/clientes/4",
+					"protocol": "https",
+					"host": [
+						"cadastroclientesapi-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
